@@ -1,0 +1,42 @@
+.back-color {
+  background-color: #F8FAFC !important;
+}
+
+.content-width {
+  max-width: 934px !important;
+}
+
+.custom-card3 {
+  min-height: 170px !important;
+}
+
+.card-height {
+  min-height: 288px !important;
+}
+
+.contact-para {
+  max-width: 700px !important;
+  color: #7e7f7e !important;
+  line-height: 1.8rem !important;
+}
+
+.form-control {
+  min-height: 54px !important;
+  border: 2px solid #CBCDCC !important;
+}
+
+.form-check-input {
+  height: 21px !important;
+  width: 21px !important;
+}
+
+.form-check-label {
+  color: #787878 !important;
+  font-size: 13px !important;
+}
+
+.send-button {
+  max-width: 157px !important;
+  background-color: #28C76F !important;
+  color: #ffffff !important;
+}

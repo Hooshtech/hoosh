@@ -1,0 +1,174 @@
+    .hover-button {
+        color: #28C76F !important;
+        color: white !important;
+        max-width: 246px;
+        background-color: #28C76F !important;
+    }
+
+    .hover-button:hover {
+        background-color: #20a55c !important;
+        color: white !important;
+    }
+
+    .fs-640 {
+        max-width: 640px !important;
+    }
+
+    .fs-400 {
+        max-width: 400px !important;
+    }
+
+
+      .video-container {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
+        }
+
+        .video-player {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .play-pause-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0);
+            border: 3px solid white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            /* backdrop-filter: blur(10px); */
+        }
+
+        .play-pause-btn:hover {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1.2);
+        }
+
+        .play-pause-btn:active {
+            transform: scale(0.95);
+        }
+
+        .play-icon,
+        .pause-icon {
+            width: 30px;
+            height: 30px;
+            fill: #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .pause-icon {
+            display: none;
+        }
+
+        .video-container.playing .play-icon {
+            display: none;
+        }
+
+        .video-container.playing .pause-icon {
+            display: block;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover .video-controls {
+            transform: translateY(0);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .progress-filled {
+            height: 100%;
+            background: #ff4757;
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        .controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .time-display {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .volume-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .volume-slider {
+            width: 80px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .fullscreen-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 5px;
+        }

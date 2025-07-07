@@ -1,0 +1,63 @@
+   .hover-button {
+       color: #28C76F !important;
+       color: white !important;
+       max-width: 130px;
+       background-color: #28C76F !important;
+   }
+
+   .hover-button:hover {
+       background-color: #20a55c !important;
+       color: white !important;
+   }
+
+   .input-container2 {
+       position: relative;
+       width: 100%;
+       max-width: 577px;
+       /* Set width to 680px */
+   }
+
+   .input-control2 {
+       width: 100%;
+       padding: 10px 20px;
+       padding-left: 40px !important;
+       /* Space for the SVG icon */
+       border-radius: 16px 0px 0px 16px;
+       border: 2px solid #28C76F;
+       outline: #28C76F;
+   }
+
+   .input-control2::placeholder {
+       color: #9e9e9e;
+   }
+
+   .input-control2:focus {
+       border: 2px solid #28C76F;
+
+   }
+
+   .input-control2::placeholder {
+       color: #9e9e9e;
+   }
+
+   .fs-523 {
+       max-width: 523px !important;
+   }
+
+   .text-back {
+       background-color: #E6FAEF !important;
+       border-radius: 8px !important;
+   }
+
+   .card-content {
+       border-radius: 16px !important;
+       box-shadow: 7px 7px 5px #E0E9EF7A !important;
+   }
+
+   .text-light-gray {
+       color: #0F0F0F !important;
+   }
+
+   .fs-300 {
+       max-width: 300px !important;
+   }

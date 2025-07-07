@@ -1,0 +1,45 @@
+.custom-card4 {
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  background: rgba(255, 255, 255, 0) !important;
+}
+
+.card-img-custom {
+  width: 240px !important;
+  height: 240px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
+
+.card-content {
+  padding: 1.5rem !important;
+}
+
+.card-text {
+  color: #6c757d !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 575.98px) {
+  .card-img-custom {
+    width: 100% !important;
+    height: 240px !important;
+    border-radius: 8px 8px 0 0 !important;
+  }
+
+  .card-content {
+    padding: 1rem !important;
+  }
+}
+
+.para-spacing {
+  letter-spacing: 2px !important;
+}
+.banner{
+  min-height: 180px !important;
+}

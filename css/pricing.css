@@ -1,0 +1,153 @@
+  .custom-card4 {
+      border: none;
+      box-shadow: -12px 12px 10px -4px #E0E9EFA3 !important;
+      border-radius: 24px !important;
+      min-height: 346px !important;
+      background-color: white !important;
+      /* background: rgba(255, 255, 255, 0); */
+  }
+
+  .pricing-card {
+      background: white;
+      border-radius: 24px !important;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: none;
+      height: 100%;
+      transition: none .6s;
+  }
+
+  .pricing-card:hover {
+      border-top: 4px solid #28C76F !important;
+      cursor: default;
+      transform: translateY(-20px);
+      transition: all 0.5s;
+      /* Adds a subtle lift effect */
+  }
+
+  .plan-icon {
+      width: 32px;
+      height: 32px;
+      background-color: #10b981;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .plan-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+  }
+
+  .plan-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 4px;
+  }
+
+  .plan-subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      font-weight: 400;
+  }
+
+  .price {
+      font-size: 48px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1;
+  }
+
+  .price-details {
+      font-size: 16px;
+      color: #0F0F0F !important;
+  }
+
+  .current-plan {
+      background-color: #CBCDCC;
+      color: white;
+      text-align: center;
+      /* padding: 12px; */
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+  }
+
+  .features-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+  }
+
+  .checkmark {
+      width: 20px;
+      height: 20px;
+      background-color: #10b981;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+  }
+
+  .checkmark svg {
+      width: 12px;
+      height: 12px;
+      fill: white;
+  }
+
+  .custom-bg {
+      background-color: #E6FAEF !important;
+      border-radius: 16px !important;
+  }
+
+  .feature-text {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.4;
+  }
+
+  .hover-button {
+      border: 2px solid #28C76F !important;
+      background-color: #28C76F;
+      max-width: 246px;
+      color: white !important;
+      padding: 8px !important;
+      border-radius: 8px !important;
+  }
+
+  .hover-button:hover {
+      background-color: #24b465 !important;
+      color: white !important;
+      border: none !important;
+  }
+
+  .fs-552 {
+      max-width: 552px !important;
+  }
+
+  .fs-10 {
+      font-size: 10px !important;
+  }
+
+  .fs-13 {
+      font-size: 13px !important;
+  }
+
+  .fs-500 {
+      max-width: 500px !important;
+  }
+
+  .fs-700 {
+      max-width: 700px !important;
+  }
+
+  .custon-btn {
+      background-color: #E6FAEF !important;
+      color: #28C76F !important;
+  }
