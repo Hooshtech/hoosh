@@ -73,8 +73,8 @@
                         </div>
                         <div class="banner_content d-flex justify-content-center align-items-center">
                             <h1 class="fs-49 text-center">SIGN UP</h1>
-                            <h5 class="fs-20 w-100 fs-405 text-center">
-                                Sign up as an individual, business, or jurisdiction.
+                            <h5 class="fs-20 w-100 fs-640 text-center">
+                                Sign up as a property owner, professional firm, contractor, jurisdiction, or other.
                             </h5>
                         </div>
                         <div class="banner-right-circle">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
 
-                        <div class="form-container mb-4">
+                        <div class="form-container mb-2">
                             <!-- User Details Section -->
                             <div class="">
                                 <h3 class="fs-39">User Details</h3>
@@ -159,31 +159,22 @@
                                         required></textarea>
                                 </div>
                                 <div class="row">
-                                    <!-- User Type -->
-                                    <div class="col-12 mb-3">
-                                        <label class="form-label">User Type <span class="required">*</span></label>
-                                        <select class="form-select" id="user-type" required>
-                                            <option value="individual">Individual</option>
-                                            <option value="business">Business</option>
-                                            <option value="organization">Jurisdiction</option>
-                                        </select>
-                                    </div>
                                     <div class="col-md-12 col-lg-6 mb-3">
                                         <label class="form-label">Company Name <span class="required">*</span></label>
                                         <input type="text" class="form-control" id="company_name" placeholder="required"
                                             required>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-3">
-                                        <label class="form-label">Company Logo<span class="required">*</span></label>
-                                        <div class="file-upload-container">
-                                            <input type="text" class="file-input-display" placeholder="Upload file"
-                                                readonly id="fileDisplay">
-                                            <button type="button" class="file-browse-btn"
-                                                onclick="document.getElementById('logoFile').click()">BROWSE
-                                                FILE</button>
-                                            <input type="file" class="file-input-hidden" id="logoFile" accept="image/*"
-                                                onchange="displayFileName(this)">
-                                        </div>
+
+                                        <label class="form-label">Company Type <span class="required">*</span></label>
+                                        <select class="form-select" id="user-type" required>
+                                            <option value="architect">Architectural Firm</option>
+                                            <option value="engineer">Engineering Firm</option>
+                                            <option value="contractor">Contractor</option>
+											<option value="owner">Home Owner</option>
+                                            <option value="jurisdiction">Jurisdiction</option>
+                                            <option value="other">Other</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">Company Address <span
@@ -196,14 +187,28 @@
                                                 class="required">*</span></label>
                                         <input type="tel" class="form-control" id="company_phone_number"
                                             placeholder="required" required>
-                                        <label class="form-label mt-3">Maximum Number of Users <span
+                                        <label class="form-label mt-3">Initial Team Size <span
                                                 class="required">*</span></label>
                                         <input type="number" class="form-control" id="max-users" placeholder="1" min="1"
                                             required>
                                     </div>
                                 </div>
+							
                                 <div class="mb-3">
-                                    <label class="form-label">Domain Name for Accessing the Portal</label>
+                                    <label class="form-label">Company Logo</label>
+                                    <div class="file-upload-container">
+                                        <input type="text" class="file-input-display" placeholder="Upload file"
+                                            readonly id="fileDisplay">
+                                        <button type="button" class="file-browse-btn"
+                                            onclick="document.getElementById('logoFile').click()">BROWSE
+                                            FILE</button>
+                                        <input type="file" class="file-input-hidden" id="logoFile" accept="image/*"
+                                            onchange="displayFileName(this)">
+                                    </div>
+                                    <label class="form-label mt-3">Company Slogan</label>
+                                    <input type="text" class="form-control" id="slogan"
+                                        placeholder="Slogan">
+                                    <label class="form-label mt-3">Domain Name for Accessing the Portal</label>
                                     <input type="text" class="form-control" id="domain_name"
                                         placeholder="exp: jurisdiction-name.ai-plancheck.com">
                                 </div>
@@ -217,8 +222,9 @@
                                 <select class="form-select" id="plan-type" required>
                                     <option value="">Select</option>
                                     <option value="starter">Starter Plan</option>
-                                    <option value="business">Standard Plan</option>
-                                    <option value="business_plus">Advanced Plan</option>
+                                    <option value="standard">Standard Plan</option>
+                                    <option value="advanced">Advanced Plan</option>
+									<option value="enterprise">Enterprise Plan</option>
                                 </select>
                             </div>
                             <!-- Subscription Type -->
@@ -688,21 +694,27 @@
 
         const planPrices = {
             starter: 0,
-            business: 49,
-            business_plus: 69
+            standard: 99,
+            advanced: 149,
+			enterprise: 0
         };
+	
+        const planNewUser = {
+            starter: 0,
+            standard: 30,
+            advanced: 40,
+			enterprise: 0
+        };	
 
         const planTypeSelect = document.getElementById("plan-type");
         const subscriptionTypeSelect = document.getElementById("subscription-type");
 		const oneTimePayment = document.getElementById("one-time-payment");
         const maxUsersInput = document.getElementById("max-users");
         const totalAmountDiv = document.getElementById("total-amount");
-        const userTypeSelect = document.getElementById("user-type");
 
         function updateAmount() {
             const plan = planTypeSelect.value;
             const subscription = subscriptionTypeSelect.value;
-            const userType = userTypeSelect.value;
             let users = parseInt(maxUsersInput.value) || 1;
 
             // If Plan is Starter
@@ -722,17 +734,13 @@
 
             // Base Calculation
             let basePrice = planPrices[plan] || 0;
-            let total = basePrice * users;
+			let baseNewPrice = planNewUser[plan]|| 0;
+            let total = basePrice + (users - 1) * baseNewPrice;
 
             // Subscription Type Discount
             if (subscription === "annually") {
-                total *= 0.8 * 12;
+                total *= 10;
             }
-
-            // Optional: User Type Discount (uncomment if needed)
-            // if (userType === "individual") {
-            //   total *= 0.9;
-            // }
 
             totalAmountDiv.textContent = `$${total.toLocaleString()}`;
         }
@@ -741,7 +749,6 @@
         planTypeSelect.addEventListener("change", updateAmount);
         subscriptionTypeSelect.addEventListener("change", updateAmount);
         maxUsersInput.addEventListener("input", updateAmount);
-        userTypeSelect.addEventListener("change", updateAmount);
 
     </script>
     <script>
