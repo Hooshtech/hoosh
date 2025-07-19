@@ -88,40 +88,21 @@
                         <div class="col-12 text-center mt-5 mb-4">
                             <h2 class="fs-39">Hoosh Tech Portal Overview — 22:36 min</h2>
                         </div>
+
                         <div class="col-12 d-flex justify-content-center mb-3">
-                            <div class="video-container" id="videoContainer">
-                                <video class="video-player" id="videoPlayer">
-                                    <source src="assets/video/demo-new.mp4" type="video/mp4">
-                                    <source src="assets/video/demo-new.mp4" type="video/ogg">
-                                    Aap ka browser video tag support nahi karta.
-                                </video>
-                                <div class="video-overlay" id="videoOverlay">
-                                    <button class="play-pause-btn" id="playPauseBtn">
-                                        <svg class="play-icon" viewBox="0 0 24 24">
-                                            <polygon points="8,5 19,12 8,19"></polygon>
-                                        </svg>
-                                        <svg class="pause-icon" viewBox="0 0 24 24">
-                                            <rect x="6" y="4" width="4" height="16"></rect>
-                                            <rect x="14" y="4" width="4" height="16"></rect>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="video-controls" id="videoControls">
-                                    <div class="progress-bar" id="progressBar">
-                                        <div class="progress-filled" id="progressFilled"></div>
-                                    </div>
-                                    <div class="controls-row">
-                                        <div class="time-display" id="timeDisplay">0:00 / 0:00</div>
-                                        <div class="volume-control">
-                                            <button class="volume-btn" id="volumeBtn">🔊</button>
-                                            <input type="range" class="volume-slider" id="volumeSlider" min="0"
-                                                max="100" value="100">
-                                        </div>
-                                        <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
-                                    </div>
+                            <div class="video-container" style="max-width: 960px; width: 100%;">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="100%" height="100%" 
+                                        src="https://www.youtube.com/embed/AwtR35IvQWM?rel=0&modestbranding=1&showinfo=0&fs=1"
+                                        title="Hoosh Tech Portal Demo"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12 text-center">
                             <h4 class="fs-25">
                                 What You’ll Learn
