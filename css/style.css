@@ -437,8 +437,8 @@ main {
 }
 
 .caption-box {
-    background: rgba(40, 199, 111, 0.6);  /* Light semi-transparent */
-    color: #000;                          /* Override white text */
+    background: rgba(40, 199, 111, 0.75);  /* Light semi-transparent */
+   /* color: #000; */                          /* Override white text */
     padding: 30px;
     border-radius: 12px;
     text-align: center;
@@ -479,7 +479,7 @@ main {
   .caption-box {
     padding: 16px;
     margin: 0 auto;
-    background: rgba(40, 199, 111, 0.6);
+    background: rgba(40, 199, 111, 1);
     width: 100%;
     max-width: 90%;
     box-sizing: border-box;
