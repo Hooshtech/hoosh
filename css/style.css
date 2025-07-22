@@ -409,7 +409,7 @@ main {
     height: 6px !important;
     border-radius: 8px !important;
 }
-
+  
 .carousel-item {
     transition: all 2s ease-in-out;
 	height: 800px;
@@ -437,7 +437,7 @@ main {
 }
 
 .caption-box {
-    background: rgba(255, 255, 255, 0.5);  /* Light semi-transparent */
+    background: rgba(40, 199, 111, 0.6);  /* Light semi-transparent */
     color: #000;                          /* Override white text */
     padding: 30px;
     border-radius: 12px;
@@ -445,6 +445,64 @@ main {
     max-width: 900px;
     width: 100%;
     pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  /* Hide background images */
+  .carousel-item img {
+    display: none !important;
+  }
+
+  /* Adjust carousel height and spacing on mobile */
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: auto !important;
+    min-height: 230px; /* Adjust to make it a bit taller */
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    overflow: hidden;
+  }
+
+  /* Allow caption to flow in document */
+  .custom-caption {
+    position: relative !important;
+    height: auto !important;
+    padding: 0 1rem !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Adjust the appearance of the overlaid card */
+  .caption-box {
+    padding: 16px;
+    margin: 0 auto;
+    background: rgba(40, 199, 111, 0.6);
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
+
+  /* Remove extra space below slide */
+  .carousel-inner,
+  .carousel-item,
+  .caption-box,
+  .custom-caption {
+    margin-bottom: 0 !important;
+  }
+
+  /* Reduce gap after carousel section */
+  #hooshCarousel {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Center-align text cleanly */
+  .caption-box h5,
+  .caption-box p {
+    text-align: center !important;
+  }
 }
 
 .caption-inner {
