@@ -499,7 +499,7 @@ main {
   }
 
   /* Center-align text cleanly */
-  .caption-box h5,
+  .caption-box h1,
   .caption-box p {
     text-align: center !important;
   }
