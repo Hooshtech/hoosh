@@ -237,17 +237,16 @@
                             </div>
                             <!-- Subscription Type -->
 							<div class="row">
-                                <div class="col-10 mb-3">
+                                <div class="col-12 mb-3">
                                     <label class="form-label">Subscription Type <span class="required">*</span></label>
                                     <select class="form-select" id="subscription-type" required>
                                         <option value="">Select</option>
                                         <option value="monthly">Monthly</option>
                                         <option value="annually">Annually</option>
+										<option value="1 month">1 Month</option>
+										<option value="2 months">2 Months</option>
+										<option value="3 months">3 Months</option>
                                     </select>
-                                </div>
-                                <div class="col-2 mt-5">
-                                    <input class="form-check-input" type="checkbox" id="one-time-payment">
-                                    <label class="form-label">One-Time Payment</label>
                                 </div>
                             </div>
 							
@@ -716,7 +715,6 @@
 
         const planTypeSelect = document.getElementById("plan-type");
         const subscriptionTypeSelect = document.getElementById("subscription-type");
-		const oneTimePayment = document.getElementById("one-time-payment");
         const maxUsersInput = document.getElementById("max-users");
         const totalAmountDiv = document.getElementById("total-amount");
 
@@ -731,23 +729,25 @@
                 maxUsersInput.setAttribute("readonly", true);
                 subscriptionTypeSelect.value = "monthly";
                 subscriptionTypeSelect.setAttribute("disabled", true);
-				oneTimePayment.setAttribute("disabled", true);
                 totalAmountDiv.textContent = "$0";
                 return;
             } else {
                 maxUsersInput.removeAttribute("readonly");
                 subscriptionTypeSelect.removeAttribute("disabled");
-				oneTimePayment.removeAttribute("disabled");
             }
 
             // Base Calculation
             let basePrice = planPrices[plan] || 0;
-			let baseNewPrice = planNewUser[plan]|| 0;
+			let baseNewPrice = planNewUser[plan] || 0;
             let total = basePrice + (users - 1) * baseNewPrice;
 
             // Subscription Type Discount
             if (subscription === "annually") {
                 total *= 10;
+            } else if (subscription === "2 months") {
+                total *= 2;
+            } else if (subscription === "3 months") {
+                total *= 3;
             }
 
             totalAmountDiv.textContent = `$${total.toLocaleString()}`;
