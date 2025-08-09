@@ -1,23 +1,33 @@
-    .custom-card4 {
-        border: none !important;
-        box-shadow: -12px 12px 10px -4px #E0E9EFA3 !important;
-        border-radius: 24px !important;
-        min-height: 346px !important;
-        background-color: white !important;
-        /* background: rgba(255, 255, 255, 0); */
-    }
+.custom-card4 {
+    border: none !important;
+    box-shadow: -12px 12px 10px -4px #E0E9EFA3 !important;
+    border-radius: 24px !important;
+    min-height: 346px !important;
+    background-color: white !important;
+    /* background: rgba(255, 255, 255, 0); */
+}
 
-    .fs-552 {
-        max-width: 552px !important;
-    }
+.fs-552 {
+    max-width: 552px !important;
+}
 
-    .lh-text {
-        color: #0F0F0F !important;
-        line-height: 1.8rem !important;
-     }
-     .fs-175{
-        max-width: 175px !important;
-     }
-     .fs-700 {
-      max-width: 700px !important;
-  }
+.lh-text {
+    color: #0F0F0F !important;
+    line-height: 1.8rem !important;
+}
+
+.fs-175{
+    max-width: 175px !important;
+}
+
+.fs-700 {
+    max-width: 700px !important;
+}
+
+.version-note {
+    font-size: 0.85rem;   /* smaller text */
+    line-height: 1.2;     /* keeps it close to the title */
+    display: block;       /* ensures it appears on its own line */
+    margin-top: 0.1rem;   /* small gap from title */
+    color: #28C76F;       /* same green as your .text-green */
+}
