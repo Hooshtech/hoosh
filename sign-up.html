@@ -84,9 +84,10 @@
                     </div>
 
                     <!-- A Temporary Note -->					
-                    <div class="d-flex justify-content-center align-items-center">
-                        <h3 class="fw-bold text-danger fs-3 text-center">
-                            The <span class="text-green-bold">Hoosh Tech Portal</span> is currently in its final development and testing phase, with over 80% of the platform fully implemented. We are on track to launch by the end of 2025. In the meantime, feel free to <a href="index.html#contact-us">Contact Us</a> for a personalized demo or to ask any questions—we’d love to hear from you.
+                    <div class="d-flex align-items-center">
+                        <h3 class="fw-bold text-danger fs-3 text-start">
+                            Our <span class="text-green-bold">Hoosh Tech Portal</span> is currently in its final development and testing, with over 80% of the platform already fully implemented. We are on track for a full launch <strong>by the end of 2025</strong>. In the meantime, feel free to <a href="index.html#contact-us">Contact Us</a> for a personalized demo or to ask any questions—we’d love to hear from you.<br><br>
+							<span class="text-green-bold">BuildingQA</span> is fully implemented and ready for use, but it is undergoing testing across all disciplines. Additionally, we are in the process of embedding the code documents from several jurisdictions into the product. BuildingQA is scheduled for official launch at the end of October 2025.
                         </h3>
                     </div>
 					
@@ -175,7 +176,7 @@
                                     <div class="col-12 col-lg-6 mb-3">
 
                                         <label class="form-label">Company Type <span class="required">*</span></label>
-                                        <select class="form-select" id="user-type" required>
+                                        <select class="form-select" id="company-type" required>
                                             <option value="architect">Architectural Firm</option>
                                             <option value="engineer">Engineering Firm</option>
                                             <option value="contractor">Contractor</option>
@@ -216,7 +217,7 @@
                                     <label class="form-label mt-3">Company Slogan</label>
                                     <input type="text" class="form-control" id="slogan"
                                         placeholder="Slogan">
-                                    <label class="form-label mt-3">Domain Name for Accessing the Portal</label>
+                                    <label class="form-label mt-3">Domain Name for Accessing the platform</label>
                                     <input type="text" class="form-control" id="domain_name"
                                         placeholder="exp: jurisdiction-name.ai-plancheck.com">
                                 </div>
@@ -224,12 +225,19 @@
                         </div>
 
                         <div class="form-container mb-4">
+                            <!-- Product Type -->
+                            <div class="col-12 mb-3">
+                                <label class="form-label">Product Type <span class="required">*</span></label>
+                                <select class="form-select" id="product-type" required>
+                                    <option value="building">BuildingQA</option>
+                                    <option value="portal" selected>Hoosh Tech Portal</option>
+                                </select>
+                            </div>
                             <!-- Plan Type -->
                             <div class="col-12 mb-3">
                                 <label class="form-label">Plan Type <span class="required">*</span></label>
                                 <select class="form-select" id="plan-type" required>
-                                    <option value="">Select</option>
-                                    <option value="starter">Starter Plan</option>
+                                    <option value="starter" selected>Starter Plan</option>
                                     <option value="standard">Standard Plan</option>
                                     <option value="advanced">Advanced Plan</option>
 									<option value="enterprise">Enterprise Plan</option>
@@ -240,8 +248,7 @@
                                 <div class="col-12 mb-3">
                                     <label class="form-label">Subscription Type <span class="required">*</span></label>
                                     <select class="form-select" id="subscription-type" required>
-                                        <option value="">Select</option>
-                                        <option value="monthly">Monthly</option>
+                                        <option value="monthly" selected>Monthly</option>
                                         <option value="annually">Annually</option>
 										<option value="1 month">1 Month</option>
 										<option value="2 months">2 Months</option>
@@ -305,7 +312,7 @@
 
                         <p><strong>Last Updated:</strong> 07/05/2025</p>
 
-                        <p>Welcome to <strong>Hoosh Tech LLC</strong>. By using our Portal or services, you agree to the
+                        <p>Welcome to <strong>Hoosh Tech LLC</strong>. By using our platform or services, you agree to the
                             following Terms and Conditions:</p>
 
                         <h5>1. Company Information</h5>
@@ -313,7 +320,7 @@
                             fall under California jurisdiction.</p>
 
                         <h5>2. Acceptance of Terms</h5>
-                        <p>By creating an account or using the Portal, you accept these Terms. If you disagree, do not
+                        <p>By creating an account or using the platform, you accept these Terms. If you disagree, do not
                             use the services.</p>
 
                         <h5>3. Eligibility</h5>
@@ -374,7 +381,7 @@
                         <p>AI results may be incomplete or incorrect. Users are responsible for verifying outputs.</p>
 
                         <h5>13. Limitation of Liability</h5>
-                        <p>We are not liable for indirect or consequential damages arising from use of the Portal.</p>
+                        <p>We are not liable for indirect or consequential damages arising from use of the platform.</p>
 
                         <h5>14. Changes to Terms</h5>
                         <p>We may update Terms. Continued use constitutes acceptance of updates.</p>
@@ -425,7 +432,7 @@
 
                         <h5>3. How We Use Your Information</h5>
                         <ul>
-                            <li>Operate and improve the Portal</li>
+                            <li>Operate and improve the platform</li>
                             <li>Run AI compliance checks and reports</li>
                             <li>Provide support and respond to inquiries</li>
                             <li>Manage subscriptions and billing</li>
@@ -518,7 +525,7 @@
                     <div class="">
                         <div class="card bg-transparent border-0 w-100 card4-width">
                             <h4 class="subscribe-tex fs-25 mb-4">
-                                <span class="ps-lg-5 ps-0 ">Get the latest Product Updates</span> easily in your
+                                <span class="ps-lg-5 ps-0 ">Get the latest Products Updates</span> easily in your
                                 mail box by subscribing
                             </h4>
                             <div class="d-flex justify-content-center align-items-center mb-4">
@@ -689,6 +696,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
             const selectedPlan = urlParams.get('plan');
+            const selectedProduct = urlParams.get('product');
 
             if (selectedPlan) {
                 const planSelect = document.getElementById('plan-type');
@@ -696,6 +704,14 @@
                     planSelect.value = selectedPlan;
                     planSelect.dispatchEvent(new Event('change')); // trigger dynamic pricing logic
                     planSelect.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
+            }
+            if (selectedProduct) {
+                const productSelect = document.getElementById('product-type');
+                if (productSelect) {
+                    productSelect.value = selectedProduct;
+                    productSelect.dispatchEvent(new Event('change')); // trigger dynamic pricing logic
+                    productSelect.scrollIntoView({ behavior: "smooth", block: "center" });
                 }
             }
         });
@@ -709,18 +725,31 @@
 	
         const planNewUser = {
             starter: 0,
-            standard: 30,
-            advanced: 40,
+            standard: 60,
+            advanced: 80,
 			enterprise: 0
         };	
 
+
+        const buildingPrices = {
+            starter: 0,
+            standard: 30
+        };
+	
+        const buildingNewUser = {
+            starter: 0,
+            standard: 30
+        };	
+
         const planTypeSelect = document.getElementById("plan-type");
+        const productTypeSelect = document.getElementById("product-type");
         const subscriptionTypeSelect = document.getElementById("subscription-type");
         const maxUsersInput = document.getElementById("max-users");
         const totalAmountDiv = document.getElementById("total-amount");
 
         function updateAmount() {
             const plan = planTypeSelect.value;
+            const product = productTypeSelect.value;
             const subscription = subscriptionTypeSelect.value;
             let users = parseInt(maxUsersInput.value) || 1;
 
@@ -738,13 +767,20 @@
             }
 
             // Base Calculation
-            let basePrice = planPrices[plan] || 0;
-			let baseNewPrice = planNewUser[plan] || 0;
-            let total = basePrice + (users - 1) * baseNewPrice;
+            let basePrice = 0;
+            let baseNewPrice = 0;
+            if (product === "building") {
+                basePrice = buildingPrices[plan] || 0;
+                baseNewPrice = buildingNewUser[plan] || 0;
+            } else if (product === "portal") {
+                basePrice = planPrices[plan] || 0;
+                baseNewPrice = planNewUser[plan] || 0;
+            }
+            let total = basePrice + Math.max(0, users - 1) * baseNewPrice;
 
             // Subscription Type Discount
             if (subscription === "annually") {
-                total *= 10;
+                total *= 11;
             } else if (subscription === "2 months") {
                 total *= 2;
             } else if (subscription === "3 months") {
@@ -756,6 +792,7 @@
 
         // Attach listeners
         planTypeSelect.addEventListener("change", updateAmount);
+        productTypeSelect.addEventListener("change", updateAmount);
         subscriptionTypeSelect.addEventListener("change", updateAmount);
         maxUsersInput.addEventListener("input", updateAmount);
 
@@ -786,6 +823,50 @@
         });
     </script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const productType = document.getElementById('product-type');
+        const planType = document.getElementById('plan-type');
+
+        // Plan sets for each product type
+        const plans = {
+            building: [
+                { value: 'starter', text: 'Starter Plan' },
+                { value: 'standard', text: 'Standard Plan' }
+            ],
+            portal: [
+                { value: 'starter', text: 'Starter Plan' },
+                { value: 'standard', text: 'Standard Plan' },
+                { value: 'advanced', text: 'Advanced Plan' },
+                { value: 'enterprise', text: 'Enterprise Plan' }
+            ]
+        };
+
+        function updatePlans() {
+            const selectedProduct = productType.value;
+
+            // Reset dropdown
+            planType.innerHTML = '';
+
+            // Add new set of plans
+            plans[selectedProduct].forEach(plan => {
+                const option = document.createElement('option');
+                option.value = plan.value;
+                option.textContent = plan.text;
+                planType.appendChild(option);
+            });
+
+            // Automatically select Starter Plan
+            planType.value = 'starter';
+        }
+
+        // Update when product changes
+        productType.addEventListener('change', updatePlans);
+
+        // Initialize on page load
+        updatePlans();
+    });
+    </script>
 
 </body>
 
