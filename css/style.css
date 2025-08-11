@@ -698,6 +698,10 @@ main {
     color: #28C76F;
 }
 
+.custom-card3.no-hover {
+  pointer-events: none;   /* hover never triggers */
+}
+
 .card4-width {
     max-width: 500px !important;
 }
