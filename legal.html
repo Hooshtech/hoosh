@@ -92,7 +92,9 @@
           <span class="text-green-bold">AI Code Assistant</span>, <span class="text-green-bold">AI Compliance Checker</span>, 
           and additional AI compliance modules for plan analysis, completeness checks, and related regulatory assessments. 
           Hoosh Tech LLC does <strong>not</strong> ingest, use, or rely on proprietary materials from the International Code 
-          Council (<strong>ICC</strong>) or any other commercial publisher.
+          Council (<strong>ICC</strong>) or any other commercial publisher. Our compliance modules apply structured rulesets 
+          derived from official regulatory texts; if the AI extraction step cannot confidently identify a required checkpoint, 
+          the item is labeled <strong>“Undetermined”</strong> and routed for human plan-checker review.
         </p>
 
         <h2 class="fs-47">Explicit Non-Use of ICC Materials</h2>
@@ -125,7 +127,9 @@
         <ul class="mb-4">
           <li><strong>Citations and References:</strong> We provide section citations and page/location references to the official, adopted sources.</li>
           <li><strong>Images and Diagrams:</strong> Only diagrams/graphics contained in officially adopted publications are displayed; proprietary layouts are not reproduced.</li>
-          <li><strong>Transformative Outputs:</strong> The AI Code Assistant, AI Compliance Checker, and other AI compliance modules produce original, analytical outputs (summaries, explanations, cross-references, and compliance determinations) and do not republish substantial portions of source text.</li>
+          <li><strong>AI Code Assistant:</strong> Uses similarity search over a curated context built solely from officially adopted, publicly available regulatory materials, returning original, explanatory outputs with citations.</li>
+          <li><strong>AI Compliance Checker:</strong> Scans user-submitted plan files to extract discipline-specific checkpoints and evaluates them against rules lawfully extracted and structured by Hoosh Tech staff (and, where applicable, jurisdiction reviewers). It does not republish substantial portions of source text.</li>
+          <li><strong>Confidence & Human Review:</strong> If a required checkpoint cannot be confidently extracted, it is flagged as <strong>“Undetermined”</strong> and routed for human plan-checker review. This ensures completeness and accuracy before final determinations.</li>
           <li><strong>Internal Processing:</strong> Documents are processed, vectorized, and indexed for internal retrieval and analysis; original texts are not redistributed.</li>
         </ul>
 
@@ -148,14 +152,13 @@
 
         <h2 class="fs-47">Disclaimer</h2>
         <p class="fs-640 mb-4">
-          <span class="text-green-bold">Hoosh Tech LLC</span> develops its AI tools with the goal of providing accurate, reliable, and practical assistance for code analysis and compliance. 
-          However, like all AI systems, the <span class="text-green-bold">AI Code Assistant</span>, 
-          <span class="text-green-bold">AI Compliance Checker</span>, and other AI compliance modules within the 
-          <span class="text-green-bold">Hoosh Tech Portal</span> and the <span class="text-green-bold">Building QA</span> products 
-          may occasionally produce errors or incomplete information. 
-          Users should double-check critical information and verify compliance with applicable laws, codes, and regulations, 
-          and are encouraged to consult licensed professionals or the relevant governmental authorities where appropriate. 
-          By using our tools, you acknowledge that final responsibility for compliance rests with the user.
+          <span class="text-green-bold">Hoosh Tech LLC</span> develops its AI tools to provide accurate, reliable, and practical assistance for code analysis and compliance. 
+          The <span class="text-green-bold">AI Compliance Checker</span> and related modules scan user-submitted plan files and documents, extract relevant checkpoints for each discipline, 
+          and evaluate those checkpoints against rules lawfully extracted and processed from jurisdictional legal documents by Hoosh Tech staff; jurisdictions may review, modify, add, or delete rules through their licensed professionals. 
+          Where the system cannot confidently extract a required checkpoint, it is labeled <strong>“Undetermined”</strong> for human plan-checker review. 
+          While every effort is made to ensure accuracy, AI systems may occasionally produce errors or incomplete information. 
+          Users should double-check critical results and verify compliance with applicable laws, codes, and regulations, and are encouraged to consult licensed professionals or the relevant governmental authorities where appropriate. 
+          By using our tools, you acknowledge that final responsibility for compliance rests with the user and the approving jurisdiction.
         </p>
 
         <h2 class="fs-47">Contact</h2>
