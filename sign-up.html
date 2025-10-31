@@ -86,8 +86,9 @@
                     <!-- A Temporary Note -->					
                     <div class="d-flex align-items-center">
                         <h3 class="fw-bold text-danger fs-3 text-start">
-                            Our <span class="text-green-bold">Hoosh Tech Portal</span> is currently in its final development and testing, with over 80% of the platform already fully implemented. We are on track for a full launch <strong>by the end of 2025</strong>. In the meantime, feel free to <a href="index.html#contact-us">Contact Us</a> for a personalized demo or to ask any questions—we’d love to hear from you.<br><br>
-							<span class="text-green-bold">Building QA</span> is fully implemented and ready for use, but it is undergoing testing across all disciplines. Additionally, we are in the process of embedding the code documents from several jurisdictions into the product. Building QA is scheduled for official launch at the end of October 2025.
+                            Our <span class="text-green-bold">Hoosh Tech Portal</span> is currently in its final development and testing, with over 70% of the platform already fully implemented. We are on track for a full launch <strong>by the end of March 2026</strong>. In the meantime, feel free to <a href="index.html#contact-us">Contact Us</a> for a personalized demo or to ask any questions—we’d love to hear from you.<br><br>
+							<span class="text-green-bold">AI Plan Check</span> is nearing full implementation and is currently undergoing comprehensive testing across all 12 disciplines, with a special focus on refining its plan PDF element extraction module. In parallel, jurisdiction-specific code documents are being integrated directly into the system to enhance accuracy and regional compliance intelligence. The product is on track for its official launch by Christmas 2025, marking a major milestone in automated plan analysis and compliance verification.<br><br>
+							<span class="text-green-bold">Building QA</span> is fully implemented and ready for use, but it is undergoing testing across all disciplines. Additionally, we are in the process of embedding the code documents from several jurisdictions into the product. Building QA is scheduled for official launch at the end of November 2025.
                         </h3>
                     </div>
 					
@@ -236,6 +237,7 @@
                                 <label class="form-label">Product Type <span class="required">*</span></label>
                                 <select class="form-select" id="product-type" required>
                                     <option value="building">Building QA</option>
+                                    <option value="check">AI Plan Check</option>
                                     <option value="portal" selected>Hoosh Tech Portal</option>
                                 </select>
                             </div>
@@ -724,15 +726,15 @@
 
         const planPrices = {
             starter: 0,
-            standard: 99,
-            advanced: 149,
+            standard: 120,
+            advanced: 160,
 			enterprise: 0
         };
 	
         const planNewUser = {
             starter: 0,
-            standard: 60,
-            advanced: 80,
+            standard: 100,
+            advanced: 140,
 			enterprise: 0
         };	
 
@@ -745,6 +747,16 @@
         const buildingNewUser = {
             starter: 0,
             standard: 30
+        };	
+
+        const checkPrices = {
+            starter: 0,
+            standard: 90
+        };
+	
+        const checkNewUser = {
+            starter: 0,
+            standard: 90
         };	
 
         const planTypeSelect = document.getElementById("plan-type");
@@ -781,6 +793,9 @@
             } else if (product === "portal") {
                 basePrice = planPrices[plan] || 0;
                 baseNewPrice = planNewUser[plan] || 0;
+            } else if (product === "check") {
+                basePrice = checkPrices[plan] || 0;
+                baseNewPrice = checkNewUser[plan] || 0;
             }
             let total = basePrice + Math.max(0, users - 1) * baseNewPrice;
 
@@ -837,6 +852,10 @@
         // Plan sets for each product type
         const plans = {
             building: [
+                { value: 'starter', text: 'Starter Plan' },
+                { value: 'standard', text: 'Standard Plan' }
+            ],
+            check: [
                 { value: 'starter', text: 'Starter Plan' },
                 { value: 'standard', text: 'Standard Plan' }
             ],
