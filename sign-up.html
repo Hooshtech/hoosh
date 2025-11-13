@@ -87,8 +87,8 @@
                     <div class="d-flex align-items-center">
                         <h3 class="fw-bold text-danger fs-3 text-start">
                             Our <span class="text-green-bold">Hoosh Tech Portal</span> is currently in its final development and testing, with over 70% of the platform already fully implemented. We are on track for a full launch <strong>by the end of March 2026</strong>. In the meantime, feel free to <a href="index.html#contact-us">Contact Us</a> for a personalized demo or to ask any questions—we’d love to hear from you.<br><br>
-							<span class="text-green-bold">AI Plan Check</span> is nearing full implementation and is currently undergoing comprehensive testing across all 12 disciplines, with a special focus on refining its plan PDF element extraction module. In parallel, jurisdiction-specific code documents are being integrated directly into the system to enhance accuracy and regional compliance intelligence. The product is on track for its official launch by Christmas 2025, marking a major milestone in automated plan analysis and compliance verification.<br><br>
-							<span class="text-green-bold">Building QA</span> is fully implemented and ready for use, but it is undergoing testing across all disciplines. Additionally, we are in the process of embedding the code documents from several jurisdictions into the product. Building QA is scheduled for official launch at the end of November 2025.
+							<span class="text-green-bold">AI Plan Check</span> is on track for its official launch by the end of 2025.<br><br>
+							<span class="text-green-bold">Building QA</span> is scheduled for official launch by the end of 2025.
                         </h3>
                     </div>
 					
@@ -163,11 +163,32 @@
                                     <input type="tel" class="form-control" id="phone_number" placeholder="required"
                                         required>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Address <span class="required">*</span></label>
-                                    <textarea class="form-control" id="address" rows="3" placeholder="required"
-                                        required></textarea>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Street Address <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="street_address" placeholder="required"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Address 2 </label>
+                                        <input type="text" class="form-control" id="address2" placeholder="not required" required>
+                                    </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">City <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="city" placeholder="required"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Postal Code <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="postal_code" placeholder="required"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <h3 class="fs-39 mt-3 mb-3">Company Details</h3>
                                 <div class="row">
                                     <div class="col-md-12 col-lg-6 mb-3">
                                         <label class="form-label">Company Name <span class="required">*</span></label>
@@ -175,7 +196,6 @@
                                             required>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-3">
-
                                         <label class="form-label">Company Type <span class="required">*</span></label>
                                         <select class="form-select" id="company-type" required>
                                             <option value="architect">Architectural Firm</option>
@@ -186,20 +206,42 @@
                                             <option value="other">Other</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Company Address <span
-                                                class="required">*</span></label>
-                                        <textarea class="form-control" id="company_address" rows="6"
-                                            placeholder="required" required></textarea>
-                                    </div>
+								</div>
+                                <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">Company Phone Number <span
                                                 class="required">*</span></label>
                                         <input type="tel" class="form-control" id="company_phone_number"
                                             placeholder="required" required>
-                                        <label class="form-label mt-3">Initial Team Size <span
+									</div>
+									<div class="col-md-6 mb-3">
+                                        <label class="form-label">Initial Team Size <span
                                                 class="required">*</span></label>
                                         <input type="number" class="form-control" id="max-users" placeholder="1" min="1"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Company Street Address <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="company_street_address" placeholder="required"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Company Address 2 </label>
+                                        <input type="text" class="form-control" id="company_address2" placeholder="not required" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Company City <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="company_city" placeholder="required"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Company Postal Code <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="company_postal_code" placeholder="required"
                                             required>
                                     </div>
                                 </div>
